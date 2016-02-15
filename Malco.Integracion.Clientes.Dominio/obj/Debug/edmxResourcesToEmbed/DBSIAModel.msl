@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbsiasqlModelStoreContainer" CdmEntityContainer="dbsiasqlEntities">
+    <EntitySetMapping Name="tbDetalleFacturas">
+      <EntityTypeMapping TypeName="dbsiasqlModel.DetalleFacturas">
+        <MappingFragment StoreEntitySet="tbDetalleFacturas">
+          <ScalarProperty Name="NConsecutivoNacional" ColumnName="NConsecutivoNacional" />
+          <ScalarProperty Name="NNroFactura" ColumnName="NNroFactura" />
+          <ScalarProperty Name="NConsDo" ColumnName="NConsDo" />
+          <ScalarProperty Name="NCodigoGasto" ColumnName="NCodigoGasto" />
+          <ScalarProperty Name="CTipo" ColumnName="CTipo" />
+          <ScalarProperty Name="NValor" ColumnName="NValor" />
+          <ScalarProperty Name="nVlrSaldoNotaCredito" ColumnName="nVlrSaldoNotaCredito" />
+          <ScalarProperty Name="CNroDocReferencia" ColumnName="CNroDocReferencia" />
+          <ScalarProperty Name="NIva" ColumnName="NIva" />
+          <ScalarProperty Name="NIdProveedor" ColumnName="NIdProveedor" />
+          <ScalarProperty Name="NDigitoChequeo" ColumnName="NDigitoChequeo" />
+          <ScalarProperty Name="cCuenta" ColumnName="cCuenta" />
+          <ScalarProperty Name="cDescripcion" ColumnName="cDescripcion" />
+          <ScalarProperty Name="NGrupo" ColumnName="NGrupo" />
+          <ScalarProperty Name="NReteFuente" ColumnName="NReteFuente" />
+          <ScalarProperty Name="NReteIva" ColumnName="NReteIva" />
+          <ScalarProperty Name="NReteIca" ColumnName="NReteIca" />
+          <ScalarProperty Name="CTipoIngreso" ColumnName="CTipoIngreso" />
+          <ScalarProperty Name="CContabiliza" ColumnName="CContabiliza" />
+          <ScalarProperty Name="CCentro" ColumnName="CCentro" />
+          <ScalarProperty Name="CPlata" ColumnName="CPlata" />
+          <ScalarProperty Name="CDevolverA" ColumnName="CDevolverA" />
+          <ScalarProperty Name="NConsecutivo" ColumnName="NConsecutivo" />
+          <ScalarProperty Name="CNroDocumento" ColumnName="CNroDocumento" />
+          <ScalarProperty Name="NNaturaleza" ColumnName="NNaturaleza" />
+          <ScalarProperty Name="nConsDetalle" ColumnName="nConsDetalle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tEncabezadoFacturas">
+      <EntityTypeMapping TypeName="dbsiasqlModel.EncabezadoFacturas">
+        <MappingFragment StoreEntitySet="tbEncabezadoFacturas">
+          <ScalarProperty Name="NConsecutivoNacional" ColumnName="NConsecutivoNacional" />
+          <ScalarProperty Name="NNroFactura" ColumnName="NNroFactura" />
+          <ScalarProperty Name="NSede" ColumnName="NSede" />
+          <ScalarProperty Name="CFechaElaboracionFactura" ColumnName="CFechaElaboracionFactura" />
+          <ScalarProperty Name="NidTercero" ColumnName="NidTercero" />
+          <ScalarProperty Name="NDCTercero" ColumnName="NDCTercero" />
+          <ScalarProperty Name="NVlrFactura" ColumnName="NVlrFactura" />
+          <ScalarProperty Name="NConsDo" ColumnName="NConsDo" />
+          <ScalarProperty Name="NNroFrasia" ColumnName="NNroFrasia" />
+          <ScalarProperty Name="NAnoFraSia" ColumnName="NAnoFraSia" />
+          <ScalarProperty Name="NVlrSaldo" ColumnName="NVlrSaldo" />
+          <ScalarProperty Name="NVlrAbono" ColumnName="NVlrAbono" />
+          <ScalarProperty Name="NVlrIva" ColumnName="NVlrIva" />
+          <ScalarProperty Name="NVlrReteFuente" ColumnName="NVlrReteFuente" />
+          <ScalarProperty Name="NVlrReteIva" ColumnName="NVlrReteIva" />
+          <ScalarProperty Name="NVlrReteIca" ColumnName="NVlrReteIca" />
+          <ScalarProperty Name="NTasaCambio" ColumnName="NTasaCambio" />
+          <ScalarProperty Name="NNroDocdePago" ColumnName="NNroDocdePago" />
+          <ScalarProperty Name="CTipoDocdePago" ColumnName="CTipoDocdePago" />
+          <ScalarProperty Name="CCosto" ColumnName="CCosto" />
+          <ScalarProperty Name="CCentro" ColumnName="CCentro" />
+          <ScalarProperty Name="CPlata" ColumnName="CPlata" />
+          <ScalarProperty Name="NCartera" ColumnName="NCartera" />
+          <ScalarProperty Name="NCodigoUsuarioCreacion" ColumnName="NCodigoUsuarioCreacion" />
+          <ScalarProperty Name="CEstado" ColumnName="CEstado" />
+          <ScalarProperty Name="CMotivoEstado" ColumnName="CMotivoEstado" />
+          <ScalarProperty Name="NCodigoUsuarioEstado" ColumnName="NCodigoUsuarioEstado" />
+          <ScalarProperty Name="CFechaHoraEstado" ColumnName="CFechaHoraEstado" />
+          <ScalarProperty Name="cFechaVencimiento" ColumnName="cFechaVencimiento" />
+          <ScalarProperty Name="Nueva" ColumnName="Nueva" />
+          <ScalarProperty Name="CPlataViejo" ColumnName="CPlataViejo" />
+          <ScalarProperty Name="CPlataViejoBg" ColumnName="CPlataViejoBg" />
+          <ScalarProperty Name="NuevaBG" ColumnName="NuevaBG" />
+          <ScalarProperty Name="CDocompleto" ColumnName="CDocompleto" />
+          <ScalarProperty Name="cDevolverSaldoaFavor" ColumnName="cDevolverSaldoaFavor" />
+          <ScalarProperty Name="cExportadoComodin" ColumnName="cExportadoComodin" />
+          <ScalarProperty Name="nCastigar" ColumnName="nCastigar" />
+          <ScalarProperty Name="dFechaCastigo" ColumnName="dFechaCastigo" />
+          <ScalarProperty Name="cPlataAntes1Dic" ColumnName="cPlataAntes1Dic" />
+          <ScalarProperty Name="nCarteraAntes1Dic" ColumnName="nCarteraAntes1Dic" />
+          <ScalarProperty Name="cSaldoEnCero" ColumnName="cSaldoEnCero" />
+          <ScalarProperty Name="cObservaciones" ColumnName="cObservaciones" />
+          <ScalarProperty Name="nAnno" ColumnName="nAnno" />
+          <ScalarProperty Name="cDireccionIP" ColumnName="cDireccionIP" />
+          <ScalarProperty Name="nFacturaVariosDo" ColumnName="nFacturaVariosDo" />
+          <ScalarProperty Name="cSaldoEnCeroNuevo" ColumnName="cSaldoEnCeroNuevo" />
+          <ScalarProperty Name="nNoMostrarEnCruceDeCuentas" ColumnName="nNoMostrarEnCruceDeCuentas" />
+          <ScalarProperty Name="NVlrReteFuenteCree" ColumnName="NVlrReteFuenteCree" />
+          <ScalarProperty Name="nReporteEnviadoGN" ColumnName="nReporteEnviadoGN" />
+          <ScalarProperty Name="dFechaEnviadoGN" ColumnName="dFechaEnviadoGN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

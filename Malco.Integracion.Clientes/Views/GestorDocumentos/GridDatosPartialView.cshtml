@@ -1,0 +1,30 @@
+﻿
+@using System.Data.Entity.ModelConfiguration.Conventions
+@using Malco.Integracion.Clientes.Dominio
+@using GridMvc.Html
+
+@model  IEnumerable<EncabezadoFacturas>  
+
+
+@if (ViewBag.HayRegistros == "conResultados")
+{
+    <div id="tablaForm">
+        @Html.Grid(Model).Columns(columns =>
+        {
+            columns.Add(f => f.NNroFactura).Titled("Numero Factura");
+            columns.Add(f => f.CFechaElaboracionFactura).Titled("Fecha Factura");
+            columns.Add(f => f.NVlrFactura).Titled("SubTotal Factura");
+            columns.Add(f => f.NVlrIva).Titled("Valor Iva");
+            columns.Add(f => f.NVlrSaldo).Titled("Total Factura");
+            columns.Add(f => f.NSede).Titled("Numero Sede");
+        })
+
+    </div>
+
+}
+else
+{
+    <div class="alert alert-warning" id="divSinResultados">
+        <strong>No hay resultados!</strong> no se encontraron resultados que coincidan con los filtros de bùsqueda.
+    </div>
+}

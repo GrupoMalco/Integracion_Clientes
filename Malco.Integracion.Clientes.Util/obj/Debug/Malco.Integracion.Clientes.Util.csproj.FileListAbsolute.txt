@@ -1,0 +1,10 @@
+D:\Malco.Integracion.Clientes\Malco.Integracion.Clientes.Util\bin\Debug\Malco.Integracion.Clientes.Util.dll
+D:\Malco.Integracion.Clientes\Malco.Integracion.Clientes.Util\bin\Debug\Malco.Integracion.Clientes.Util.pdb
+D:\Malco.Integracion.Clientes\Malco.Integracion.Clientes.Util\obj\Debug\Malco.Integracion.Clientes.Util.csprojResolveAssemblyReference.cache
+D:\Malco.Integracion.Clientes\Malco.Integracion.Clientes.Util\obj\Debug\Malco.Integracion.Clientes.Util.dll
+D:\Malco.Integracion.Clientes\Malco.Integracion.Clientes.Util\obj\Debug\Malco.Integracion.Clientes.Util.pdb
+D:\pp\Malco.Integracion.Clientes\Malco.Integracion.Clientes.Util\bin\Debug\Malco.Integracion.Clientes.Util.dll
+D:\pp\Malco.Integracion.Clientes\Malco.Integracion.Clientes.Util\bin\Debug\Malco.Integracion.Clientes.Util.pdb
+D:\pp\Malco.Integracion.Clientes\Malco.Integracion.Clientes.Util\obj\Debug\Malco.Integracion.Clientes.Util.csprojResolveAssemblyReference.cache
+D:\pp\Malco.Integracion.Clientes\Malco.Integracion.Clientes.Util\obj\Debug\Malco.Integracion.Clientes.Util.dll
+D:\pp\Malco.Integracion.Clientes\Malco.Integracion.Clientes.Util\obj\Debug\Malco.Integracion.Clientes.Util.pdb

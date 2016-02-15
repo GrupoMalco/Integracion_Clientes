@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Malco.Integracion.Clientes.Models.DatosFacturaViewModel>
+@using GridMvc.Html
+
+@if (ViewBag.HayRegistros == "conResultados")
+{
+    <div id="tablaForm">
+        @Html.Grid(Model).Named("gridDatosNuevos").Columns(columns =>
+   {
+       columns.Add(d => d.IdentificacionRegistro).Titled("Identificaciòn Registro");
+       columns.Add(d => d.NitMarioLondono).Titled("Nit Mario Londono");
+       columns.Add(d => d.NumeroFactura).Titled("Numero Factura");
+       columns.Add(d => d.FechaFactura).Titled("Fecha Factura");
+       columns.Add(d => d.SubTotalFactura).Titled("Subt Total Factura");
+       columns.Add(d => d.ValorIva).Titled("Valor Iva");
+       columns.Add(d => d.TotalFactura).Titled("Total Factura");
+       columns.Add(d => d.NSede).Titled("Nùmero Sede");
+       columns.Add(d => d.Estado).Titled("Estado");
+       columns.Add(d => d.IdentificacionRegistroDetalle).Titled("Identificaciòn Registro");
+       columns.Add(d => d.NitProveedor).Titled("Nit Proovedor");
+       columns.Add(d => d.CodigoEventoMalco).Titled("Codigo Even Malco");
+       columns.Add(d => d.SubTotalFacturaDetalle).Titled("Sub Total Factura");
+       columns.Add(d => d.ValorIvaDetalle).Titled("Valor Iva");
+       columns.Add(d => d.SaldoNotaCredito).Titled("Saldo Nota Credito");
+       columns.Add(d => d.TipoDetalle).Titled("Tipo Detalle");
+   })
+
+    </div>
+
+}
+else
+{
+    <div class="alert alert-warning" id="divSinResultados">
+        <strong>No hay resultados!</strong> no se encontraron resultados que coincidan con los filtros de bùsqueda.
+    </div>
+}

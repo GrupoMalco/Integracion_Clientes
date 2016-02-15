@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbsiasqlModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tbDetalleFacturas">
+    <Key>
+      <PropertyRef Name="nConsDetalle" />
+    </Key>
+    <Property Name="NConsecutivoNacional" Type="int" Nullable="false" />
+    <Property Name="NNroFactura" Type="int" Nullable="false" />
+    <Property Name="NConsDo" Type="int" Nullable="false" />
+    <Property Name="NCodigoGasto" Type="smallint" Nullable="false" />
+    <Property Name="CTipo" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="NValor" Type="int" Nullable="false" />
+    <Property Name="nVlrSaldoNotaCredito" Type="int" Nullable="false" />
+    <Property Name="CNroDocReferencia" Type="nvarchar" MaxLength="15" />
+    <Property Name="NIva" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="NIdProveedor" Type="bigint" />
+    <Property Name="NDigitoChequeo" Type="smallint" />
+    <Property Name="cCuenta" Type="nvarchar" MaxLength="15" />
+    <Property Name="cDescripcion" Type="nvarchar" MaxLength="100" />
+    <Property Name="NGrupo" Type="smallint" />
+    <Property Name="NReteFuente" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="NReteIva" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="NReteIca" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="CTipoIngreso" Type="nvarchar" MaxLength="1" />
+    <Property Name="CContabiliza" Type="nvarchar" MaxLength="2" />
+    <Property Name="CCentro" Type="nvarchar" MaxLength="2" />
+    <Property Name="CPlata" Type="nvarchar" MaxLength="2" />
+    <Property Name="CDevolverA" Type="nvarchar" MaxLength="1" />
+    <Property Name="NConsecutivo" Type="int" />
+    <Property Name="CNroDocumento" Type="nvarchar" MaxLength="10" />
+    <Property Name="NNaturaleza" Type="smallint" />
+    <Property Name="nConsDetalle" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbEncabezadoFacturas">
+    <Key>
+      <PropertyRef Name="NConsecutivoNacional" />
+    </Key>
+    <Property Name="NConsecutivoNacional" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NNroFactura" Type="int" Nullable="false" />
+    <Property Name="NSede" Type="tinyint" Nullable="false" />
+    <Property Name="CFechaElaboracionFactura" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="NidTercero" Type="bigint" Nullable="false" />
+    <Property Name="NDCTercero" Type="smallint" />
+    <Property Name="NVlrFactura" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="NConsDo" Type="int" Nullable="false" />
+    <Property Name="NNroFrasia" Type="int" Nullable="false" />
+    <Property Name="NAnoFraSia" Type="int" Nullable="false" />
+    <Property Name="NVlrSaldo" Type="int" Nullable="false" />
+    <Property Name="NVlrAbono" Type="int" Nullable="false" />
+    <Property Name="NVlrIva" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="NVlrReteFuente" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="NVlrReteIva" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="NVlrReteIca" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="NTasaCambio" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="NNroDocdePago" Type="int" />
+    <Property Name="CTipoDocdePago" Type="nvarchar" MaxLength="15" />
+    <Property Name="CCosto" Type="nvarchar" MaxLength="3" />
+    <Property Name="CCentro" Type="nvarchar" MaxLength="2" />
+    <Property Name="CPlata" Type="nvarchar" MaxLength="2" />
+    <Property Name="NCartera" Type="int" Nullable="false" />
+    <Property Name="NCodigoUsuarioCreacion" Type="int" />
+    <Property Name="CEstado" Type="nvarchar" MaxLength="15" />
+    <Property Name="CMotivoEstado" Type="nvarchar" MaxLength="80" />
+    <Property Name="NCodigoUsuarioEstado" Type="int" />
+    <Property Name="CFechaHoraEstado" Type="nvarchar" MaxLength="30" />
+    <Property Name="cFechaVencimiento" Type="nvarchar" MaxLength="10" />
+    <Property Name="Nueva" Type="nvarchar" MaxLength="2" />
+    <Property Name="CPlataViejo" Type="nvarchar" MaxLength="2" />
+    <Property Name="CPlataViejoBg" Type="nvarchar" MaxLength="2" />
+    <Property Name="NuevaBG" Type="nvarchar" MaxLength="2" />
+    <Property Name="CDocompleto" Type="nvarchar" MaxLength="10" />
+    <Property Name="cDevolverSaldoaFavor" Type="nvarchar" MaxLength="2" Nullable="false" />
+    <Property Name="cExportadoComodin" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="nCastigar" Type="int" />
+    <Property Name="dFechaCastigo" Type="datetime" />
+    <Property Name="cPlataAntes1Dic" Type="nvarchar" MaxLength="2" Nullable="false" />
+    <Property Name="nCarteraAntes1Dic" Type="int" Nullable="false" />
+    <Property Name="cSaldoEnCero" Type="nvarchar" MaxLength="2" />
+    <Property Name="cObservaciones" Type="varchar" MaxLength="500" />
+    <Property Name="nAnno" Type="smallint" Nullable="false" />
+    <Property Name="cDireccionIP" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="nFacturaVariosDo" Type="tinyint" Nullable="false" />
+    <Property Name="cSaldoEnCeroNuevo" Type="nvarchar" MaxLength="2" />
+    <Property Name="nNoMostrarEnCruceDeCuentas" Type="tinyint" />
+    <Property Name="NVlrReteFuenteCree" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="nReporteEnviadoGN" Type="smallint" Nullable="false" />
+    <Property Name="dFechaEnviadoGN" Type="datetime" />
+  </EntityType>
+  <Association Name="FK_tbDetalleFacturas_tbEncabezadoFacturas">
+    <End Role="tbEncabezadoFacturas" Type="Self.tbEncabezadoFacturas" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="tbDetalleFacturas" Type="Self.tbDetalleFacturas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbEncabezadoFacturas">
+        <PropertyRef Name="NConsecutivoNacional" />
+      </Principal>
+      <Dependent Role="tbDetalleFacturas">
+        <PropertyRef Name="NConsecutivoNacional" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="dbsiasqlModelStoreContainer">
+    <EntitySet Name="tbDetalleFacturas" EntityType="Self.tbDetalleFacturas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbEncabezadoFacturas" EntityType="Self.tbEncabezadoFacturas" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_tbDetalleFacturas_tbEncabezadoFacturas" Association="Self.FK_tbDetalleFacturas_tbEncabezadoFacturas">
+      <End Role="tbEncabezadoFacturas" EntitySet="tbEncabezadoFacturas" />
+      <End Role="tbDetalleFacturas" EntitySet="tbDetalleFacturas" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

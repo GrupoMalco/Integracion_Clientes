@@ -1,0 +1,347 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="dbsiasqlModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tbDetalleFacturas">
+          <Key>
+            <PropertyRef Name="nConsDetalle" />
+          </Key>
+          <Property Name="NConsecutivoNacional" Type="int" Nullable="false" />
+          <Property Name="NNroFactura" Type="int" Nullable="false" />
+          <Property Name="NConsDo" Type="int" Nullable="false" />
+          <Property Name="NCodigoGasto" Type="smallint" Nullable="false" />
+          <Property Name="CTipo" Type="nvarchar" MaxLength="1" Nullable="false" />
+          <Property Name="NValor" Type="int" Nullable="false" />
+          <Property Name="nVlrSaldoNotaCredito" Type="int" Nullable="false" />
+          <Property Name="CNroDocReferencia" Type="nvarchar" MaxLength="15" />
+          <Property Name="NIva" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="NIdProveedor" Type="bigint" />
+          <Property Name="NDigitoChequeo" Type="smallint" />
+          <Property Name="cCuenta" Type="nvarchar" MaxLength="15" />
+          <Property Name="cDescripcion" Type="nvarchar" MaxLength="100" />
+          <Property Name="NGrupo" Type="smallint" />
+          <Property Name="NReteFuente" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="NReteIva" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="NReteIca" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="CTipoIngreso" Type="nvarchar" MaxLength="1" />
+          <Property Name="CContabiliza" Type="nvarchar" MaxLength="2" />
+          <Property Name="CCentro" Type="nvarchar" MaxLength="2" />
+          <Property Name="CPlata" Type="nvarchar" MaxLength="2" />
+          <Property Name="CDevolverA" Type="nvarchar" MaxLength="1" />
+          <Property Name="NConsecutivo" Type="int" />
+          <Property Name="CNroDocumento" Type="nvarchar" MaxLength="10" />
+          <Property Name="NNaturaleza" Type="smallint" />
+          <Property Name="nConsDetalle" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbEncabezadoFacturas">
+          <Key>
+            <PropertyRef Name="NConsecutivoNacional" />
+          </Key>
+          <Property Name="NConsecutivoNacional" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NNroFactura" Type="int" Nullable="false" />
+          <Property Name="NSede" Type="tinyint" Nullable="false" />
+          <Property Name="CFechaElaboracionFactura" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="NidTercero" Type="bigint" Nullable="false" />
+          <Property Name="NDCTercero" Type="smallint" />
+          <Property Name="NVlrFactura" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="NConsDo" Type="int" Nullable="false" />
+          <Property Name="NNroFrasia" Type="int" Nullable="false" />
+          <Property Name="NAnoFraSia" Type="int" Nullable="false" />
+          <Property Name="NVlrSaldo" Type="int" Nullable="false" />
+          <Property Name="NVlrAbono" Type="int" Nullable="false" />
+          <Property Name="NVlrIva" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="NVlrReteFuente" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="NVlrReteIva" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="NVlrReteIca" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="NTasaCambio" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="NNroDocdePago" Type="int" />
+          <Property Name="CTipoDocdePago" Type="nvarchar" MaxLength="15" />
+          <Property Name="CCosto" Type="nvarchar" MaxLength="3" />
+          <Property Name="CCentro" Type="nvarchar" MaxLength="2" />
+          <Property Name="CPlata" Type="nvarchar" MaxLength="2" />
+          <Property Name="NCartera" Type="int" Nullable="false" />
+          <Property Name="NCodigoUsuarioCreacion" Type="int" />
+          <Property Name="CEstado" Type="nvarchar" MaxLength="15" />
+          <Property Name="CMotivoEstado" Type="nvarchar" MaxLength="80" />
+          <Property Name="NCodigoUsuarioEstado" Type="int" />
+          <Property Name="CFechaHoraEstado" Type="nvarchar" MaxLength="30" />
+          <Property Name="cFechaVencimiento" Type="nvarchar" MaxLength="10" />
+          <Property Name="Nueva" Type="nvarchar" MaxLength="2" />
+          <Property Name="CPlataViejo" Type="nvarchar" MaxLength="2" />
+          <Property Name="CPlataViejoBg" Type="nvarchar" MaxLength="2" />
+          <Property Name="NuevaBG" Type="nvarchar" MaxLength="2" />
+          <Property Name="CDocompleto" Type="nvarchar" MaxLength="10" />
+          <Property Name="cDevolverSaldoaFavor" Type="nvarchar" MaxLength="2" Nullable="false" />
+          <Property Name="cExportadoComodin" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="nCastigar" Type="int" />
+          <Property Name="dFechaCastigo" Type="datetime" />
+          <Property Name="cPlataAntes1Dic" Type="nvarchar" MaxLength="2" Nullable="false" />
+          <Property Name="nCarteraAntes1Dic" Type="int" Nullable="false" />
+          <Property Name="cSaldoEnCero" Type="nvarchar" MaxLength="2" />
+          <Property Name="cObservaciones" Type="varchar" MaxLength="500" />
+          <Property Name="nAnno" Type="smallint" Nullable="false" />
+          <Property Name="cDireccionIP" Type="nvarchar" MaxLength="25" Nullable="false" />
+          <Property Name="nFacturaVariosDo" Type="tinyint" Nullable="false" />
+          <Property Name="cSaldoEnCeroNuevo" Type="nvarchar" MaxLength="2" />
+          <Property Name="nNoMostrarEnCruceDeCuentas" Type="tinyint" />
+          <Property Name="NVlrReteFuenteCree" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="nReporteEnviadoGN" Type="smallint" Nullable="false" />
+          <Property Name="dFechaEnviadoGN" Type="datetime" />
+        </EntityType>
+        <Association Name="FK_tbDetalleFacturas_tbEncabezadoFacturas">
+          <End Role="tbEncabezadoFacturas" Type="Self.tbEncabezadoFacturas" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tbDetalleFacturas" Type="Self.tbDetalleFacturas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbEncabezadoFacturas">
+              <PropertyRef Name="NConsecutivoNacional" />
+            </Principal>
+            <Dependent Role="tbDetalleFacturas">
+              <PropertyRef Name="NConsecutivoNacional" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="dbsiasqlModelStoreContainer">
+          <EntitySet Name="tbDetalleFacturas" EntityType="Self.tbDetalleFacturas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbEncabezadoFacturas" EntityType="Self.tbEncabezadoFacturas" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_tbDetalleFacturas_tbEncabezadoFacturas" Association="Self.FK_tbDetalleFacturas_tbEncabezadoFacturas">
+            <End Role="tbEncabezadoFacturas" EntitySet="tbEncabezadoFacturas" />
+            <End Role="tbDetalleFacturas" EntitySet="tbDetalleFacturas" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="dbsiasqlModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="EncabezadoFacturas">
+          <Key>
+            <PropertyRef Name="NConsecutivoNacional" />
+          </Key>
+          <Property Name="NConsecutivoNacional" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NNroFactura" Type="Int32" Nullable="false" />
+          <Property Name="NSede" Type="Byte" Nullable="false" />
+          <Property Name="CFechaElaboracionFactura" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NidTercero" Type="Int64" Nullable="false" />
+          <Property Name="NDCTercero" Type="Int16" />
+          <Property Name="NVlrFactura" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="NConsDo" Type="Int32" Nullable="false" />
+          <Property Name="NNroFrasia" Type="Int32" Nullable="false" />
+          <Property Name="NAnoFraSia" Type="Int32" Nullable="false" />
+          <Property Name="NVlrSaldo" Type="Int32" Nullable="false" />
+          <Property Name="NVlrAbono" Type="Int32" Nullable="false" />
+          <Property Name="NVlrIva" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="NVlrReteFuente" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="NVlrReteIva" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="NVlrReteIca" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="NTasaCambio" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="NNroDocdePago" Type="Int32" />
+          <Property Name="CTipoDocdePago" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="CCosto" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="CCentro" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="CPlata" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="NCartera" Type="Int32" Nullable="false" />
+          <Property Name="NCodigoUsuarioCreacion" Type="Int32" />
+          <Property Name="CEstado" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="CMotivoEstado" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="NCodigoUsuarioEstado" Type="Int32" />
+          <Property Name="CFechaHoraEstado" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="cFechaVencimiento" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Nueva" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="CPlataViejo" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="CPlataViejoBg" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="NuevaBG" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="CDocompleto" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="cDevolverSaldoaFavor" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="cExportadoComodin" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nCastigar" Type="Int32" />
+          <Property Name="dFechaCastigo" Type="DateTime" Precision="3" />
+          <Property Name="cPlataAntes1Dic" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="nCarteraAntes1Dic" Type="Int32" Nullable="false" />
+          <Property Name="cSaldoEnCero" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="cObservaciones" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="nAnno" Type="Int16" Nullable="false" />
+          <Property Name="cDireccionIP" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="nFacturaVariosDo" Type="Byte" Nullable="false" />
+          <Property Name="cSaldoEnCeroNuevo" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="nNoMostrarEnCruceDeCuentas" Type="Byte" />
+          <Property Name="NVlrReteFuenteCree" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="nReporteEnviadoGN" Type="Int16" Nullable="false" />
+          <Property Name="dFechaEnviadoGN" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="tbDetalleFacturas" Relationship="dbsiasqlModel.FK_tbDetalleFacturas_tbEncabezadoFacturas" FromRole="tbEncabezadoFacturas" ToRole="tbDetalleFacturas" />
+        </EntityType>
+        <EntityContainer Name="DBSIASQLContext" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tbEncabezadoFacturas" EntityType="dbsiasqlModel.EncabezadoFacturas" />
+          <EntitySet Name="tbDetalleFacturas" EntityType="dbsiasqlModel.DetalleFacturas" />
+          <AssociationSet Name="FK_tbDetalleFacturas_tbEncabezadoFacturas" Association="dbsiasqlModel.FK_tbDetalleFacturas_tbEncabezadoFacturas">
+            <End Role="tbEncabezadoFacturas" EntitySet="tbEncabezadoFacturas" />
+            <End Role="tbDetalleFacturas" EntitySet="tbDetalleFacturas" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="DetalleFacturas">
+          <Key>
+            <PropertyRef Name="nConsDetalle" />
+          </Key>
+          <Property Name="NConsecutivoNacional" Type="Int32" Nullable="false" />
+          <Property Name="NNroFactura" Type="Int32" Nullable="false" />
+          <Property Name="NConsDo" Type="Int32" Nullable="false" />
+          <Property Name="NCodigoGasto" Type="Int16" Nullable="false" />
+          <Property Name="CTipo" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="NValor" Type="Int32" Nullable="false" />
+          <Property Name="nVlrSaldoNotaCredito" Type="Int32" Nullable="false" />
+          <Property Name="CNroDocReferencia" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="NIva" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="NIdProveedor" Type="Int64" />
+          <Property Name="NDigitoChequeo" Type="Int16" />
+          <Property Name="cCuenta" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="cDescripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="NGrupo" Type="Int16" />
+          <Property Name="NReteFuente" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="NReteIva" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="NReteIca" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="CTipoIngreso" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="CContabiliza" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="CCentro" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="CPlata" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="CDevolverA" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="NConsecutivo" Type="Int32" />
+          <Property Name="CNroDocumento" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="NNaturaleza" Type="Int16" />
+          <Property Name="nConsDetalle" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="tbEncabezadoFacturas" Relationship="dbsiasqlModel.FK_tbDetalleFacturas_tbEncabezadoFacturas" FromRole="tbDetalleFacturas" ToRole="tbEncabezadoFacturas" />
+        </EntityType>
+        <Association Name="FK_tbDetalleFacturas_tbEncabezadoFacturas">
+          <End Type="dbsiasqlModel.EncabezadoFacturas" Role="tbEncabezadoFacturas" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="dbsiasqlModel.DetalleFacturas" Role="tbDetalleFacturas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbEncabezadoFacturas">
+              <PropertyRef Name="NConsecutivoNacional" />
+            </Principal>
+            <Dependent Role="tbDetalleFacturas">
+              <PropertyRef Name="NConsecutivoNacional" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="dbsiasqlModelStoreContainer" CdmEntityContainer="DBSIASQLContext">
+          <EntitySetMapping Name="tbEncabezadoFacturas">
+            <EntityTypeMapping TypeName="dbsiasqlModel.EncabezadoFacturas">
+              <MappingFragment StoreEntitySet="tbEncabezadoFacturas">
+                <ScalarProperty Name="NConsecutivoNacional" ColumnName="NConsecutivoNacional" />
+                <ScalarProperty Name="NNroFactura" ColumnName="NNroFactura" />
+                <ScalarProperty Name="NSede" ColumnName="NSede" />
+                <ScalarProperty Name="CFechaElaboracionFactura" ColumnName="CFechaElaboracionFactura" />
+                <ScalarProperty Name="NidTercero" ColumnName="NidTercero" />
+                <ScalarProperty Name="NDCTercero" ColumnName="NDCTercero" />
+                <ScalarProperty Name="NVlrFactura" ColumnName="NVlrFactura" />
+                <ScalarProperty Name="NConsDo" ColumnName="NConsDo" />
+                <ScalarProperty Name="NNroFrasia" ColumnName="NNroFrasia" />
+                <ScalarProperty Name="NAnoFraSia" ColumnName="NAnoFraSia" />
+                <ScalarProperty Name="NVlrSaldo" ColumnName="NVlrSaldo" />
+                <ScalarProperty Name="NVlrAbono" ColumnName="NVlrAbono" />
+                <ScalarProperty Name="NVlrIva" ColumnName="NVlrIva" />
+                <ScalarProperty Name="NVlrReteFuente" ColumnName="NVlrReteFuente" />
+                <ScalarProperty Name="NVlrReteIva" ColumnName="NVlrReteIva" />
+                <ScalarProperty Name="NVlrReteIca" ColumnName="NVlrReteIca" />
+                <ScalarProperty Name="NTasaCambio" ColumnName="NTasaCambio" />
+                <ScalarProperty Name="NNroDocdePago" ColumnName="NNroDocdePago" />
+                <ScalarProperty Name="CTipoDocdePago" ColumnName="CTipoDocdePago" />
+                <ScalarProperty Name="CCosto" ColumnName="CCosto" />
+                <ScalarProperty Name="CCentro" ColumnName="CCentro" />
+                <ScalarProperty Name="CPlata" ColumnName="CPlata" />
+                <ScalarProperty Name="NCartera" ColumnName="NCartera" />
+                <ScalarProperty Name="NCodigoUsuarioCreacion" ColumnName="NCodigoUsuarioCreacion" />
+                <ScalarProperty Name="CEstado" ColumnName="CEstado" />
+                <ScalarProperty Name="CMotivoEstado" ColumnName="CMotivoEstado" />
+                <ScalarProperty Name="NCodigoUsuarioEstado" ColumnName="NCodigoUsuarioEstado" />
+                <ScalarProperty Name="CFechaHoraEstado" ColumnName="CFechaHoraEstado" />
+                <ScalarProperty Name="cFechaVencimiento" ColumnName="cFechaVencimiento" />
+                <ScalarProperty Name="Nueva" ColumnName="Nueva" />
+                <ScalarProperty Name="CPlataViejo" ColumnName="CPlataViejo" />
+                <ScalarProperty Name="CPlataViejoBg" ColumnName="CPlataViejoBg" />
+                <ScalarProperty Name="NuevaBG" ColumnName="NuevaBG" />
+                <ScalarProperty Name="CDocompleto" ColumnName="CDocompleto" />
+                <ScalarProperty Name="cDevolverSaldoaFavor" ColumnName="cDevolverSaldoaFavor" />
+                <ScalarProperty Name="cExportadoComodin" ColumnName="cExportadoComodin" />
+                <ScalarProperty Name="nCastigar" ColumnName="nCastigar" />
+                <ScalarProperty Name="dFechaCastigo" ColumnName="dFechaCastigo" />
+                <ScalarProperty Name="cPlataAntes1Dic" ColumnName="cPlataAntes1Dic" />
+                <ScalarProperty Name="nCarteraAntes1Dic" ColumnName="nCarteraAntes1Dic" />
+                <ScalarProperty Name="cSaldoEnCero" ColumnName="cSaldoEnCero" />
+                <ScalarProperty Name="cObservaciones" ColumnName="cObservaciones" />
+                <ScalarProperty Name="nAnno" ColumnName="nAnno" />
+                <ScalarProperty Name="cDireccionIP" ColumnName="cDireccionIP" />
+                <ScalarProperty Name="nFacturaVariosDo" ColumnName="nFacturaVariosDo" />
+                <ScalarProperty Name="cSaldoEnCeroNuevo" ColumnName="cSaldoEnCeroNuevo" />
+                <ScalarProperty Name="nNoMostrarEnCruceDeCuentas" ColumnName="nNoMostrarEnCruceDeCuentas" />
+                <ScalarProperty Name="NVlrReteFuenteCree" ColumnName="NVlrReteFuenteCree" />
+                <ScalarProperty Name="nReporteEnviadoGN" ColumnName="nReporteEnviadoGN" />
+                <ScalarProperty Name="dFechaEnviadoGN" ColumnName="dFechaEnviadoGN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbDetalleFacturas">
+            <EntityTypeMapping TypeName="dbsiasqlModel.DetalleFacturas">
+              <MappingFragment StoreEntitySet="tbDetalleFacturas">
+                <ScalarProperty Name="nConsDetalle" ColumnName="nConsDetalle" />
+                <ScalarProperty Name="NNaturaleza" ColumnName="NNaturaleza" />
+                <ScalarProperty Name="CNroDocumento" ColumnName="CNroDocumento" />
+                <ScalarProperty Name="NConsecutivo" ColumnName="NConsecutivo" />
+                <ScalarProperty Name="CDevolverA" ColumnName="CDevolverA" />
+                <ScalarProperty Name="CPlata" ColumnName="CPlata" />
+                <ScalarProperty Name="CCentro" ColumnName="CCentro" />
+                <ScalarProperty Name="CContabiliza" ColumnName="CContabiliza" />
+                <ScalarProperty Name="CTipoIngreso" ColumnName="CTipoIngreso" />
+                <ScalarProperty Name="NReteIca" ColumnName="NReteIca" />
+                <ScalarProperty Name="NReteIva" ColumnName="NReteIva" />
+                <ScalarProperty Name="NReteFuente" ColumnName="NReteFuente" />
+                <ScalarProperty Name="NGrupo" ColumnName="NGrupo" />
+                <ScalarProperty Name="cDescripcion" ColumnName="cDescripcion" />
+                <ScalarProperty Name="cCuenta" ColumnName="cCuenta" />
+                <ScalarProperty Name="NDigitoChequeo" ColumnName="NDigitoChequeo" />
+                <ScalarProperty Name="NIdProveedor" ColumnName="NIdProveedor" />
+                <ScalarProperty Name="NIva" ColumnName="NIva" />
+                <ScalarProperty Name="CNroDocReferencia" ColumnName="CNroDocReferencia" />
+                <ScalarProperty Name="nVlrSaldoNotaCredito" ColumnName="nVlrSaldoNotaCredito" />
+                <ScalarProperty Name="NValor" ColumnName="NValor" />
+                <ScalarProperty Name="CTipo" ColumnName="CTipo" />
+                <ScalarProperty Name="NCodigoGasto" ColumnName="NCodigoGasto" />
+                <ScalarProperty Name="NConsDo" ColumnName="NConsDo" />
+                <ScalarProperty Name="NNroFactura" ColumnName="NNroFactura" />
+                <ScalarProperty Name="NConsecutivoNacional" ColumnName="NConsecutivoNacional" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

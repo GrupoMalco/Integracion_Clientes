@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Malco.Integracion.Clientes", "Malco.Integracion.Clientes\Malco.Integracion.Clientes.csproj", "{FC148AA5-4347-41A6-82FA-144934E43A79}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Malco.Integracion.Clientes.ATDDTests", "Malco.Integracion.Clientes.ATDDTests\Malco.Integracion.Clientes.ATDDTests.csproj", "{39164052-FE5B-4AB3-AB7D-95631064B48C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Malco.Integracion.Clientes.TDDTest", "Malco.Integracion.Clientes.TDDTest\Malco.Integracion.Clientes.TDDTest.csproj", "{CDAF4F29-BC20-428E-B0D5-7BE02622E0B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Malco.Integracion.Clientes.Repositorio", "Malco.Integracion.Clientes.Repositorio\Malco.Integracion.Clientes.Repositorio.csproj", "{3CE86820-E30B-42C3-8E77-94DA941A26C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Malco.Integracion.Clientes.Dominio", "Malco.Integracion.Clientes.Dominio\Malco.Integracion.Clientes.Dominio.csproj", "{37562592-97C9-4591-9303-15A95061532B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Malco.Integracion.Clientes.Util", "Malco.Integracion.Clientes.Util\Malco.Integracion.Clientes.Util.csproj", "{3AF27DEE-096D-4CB3-BDA5-66E06AE54E27}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FC148AA5-4347-41A6-82FA-144934E43A79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC148AA5-4347-41A6-82FA-144934E43A79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC148AA5-4347-41A6-82FA-144934E43A79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC148AA5-4347-41A6-82FA-144934E43A79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39164052-FE5B-4AB3-AB7D-95631064B48C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39164052-FE5B-4AB3-AB7D-95631064B48C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39164052-FE5B-4AB3-AB7D-95631064B48C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39164052-FE5B-4AB3-AB7D-95631064B48C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDAF4F29-BC20-428E-B0D5-7BE02622E0B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDAF4F29-BC20-428E-B0D5-7BE02622E0B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDAF4F29-BC20-428E-B0D5-7BE02622E0B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDAF4F29-BC20-428E-B0D5-7BE02622E0B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CE86820-E30B-42C3-8E77-94DA941A26C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CE86820-E30B-42C3-8E77-94DA941A26C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CE86820-E30B-42C3-8E77-94DA941A26C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CE86820-E30B-42C3-8E77-94DA941A26C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37562592-97C9-4591-9303-15A95061532B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37562592-97C9-4591-9303-15A95061532B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37562592-97C9-4591-9303-15A95061532B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37562592-97C9-4591-9303-15A95061532B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AF27DEE-096D-4CB3-BDA5-66E06AE54E27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AF27DEE-096D-4CB3-BDA5-66E06AE54E27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AF27DEE-096D-4CB3-BDA5-66E06AE54E27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AF27DEE-096D-4CB3-BDA5-66E06AE54E27}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

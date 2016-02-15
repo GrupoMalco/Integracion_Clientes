@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "GestionDocumentos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script type="text/javascript" src="~/Scripts/MalcoIntegracionClientes.js">
+
+</script>
+
+<script type="text/javascript">
+    var urlConsultarDatosNuevos = '@Url.Action("GridDatosNuevosDetalleFacturas", "GestorDocumentos")';
+</script>
+
+<h2>GestionDocumentos</h2>
+
+<div id="divFiltros">
+
+    <div>
+        Consultar datos nuevos
+        <label for="idTercero">Cliente</label>
+        <input type="text" id="idTercero" value="890904138"/>
+    </div>
+
+    <input type="button" onclick="consultarDatosNuevosFactura();" id="btnConsultar" value="Consultar"/>
+</div>
+
+<div id="divResultado">
+    
+</div>
